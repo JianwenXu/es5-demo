@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>6.1 理解对象</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // 创建自定义对象最简单的方式就是创建一个 Object 实例, 然后再为它添加属性和方法
+    var person = new Object();
+    person.name = "Nicholas";
+    person.age = 29;
+    person.job = "Software Engineer";
+
+    person.sayName = function () {
+      alert(this.name);
+    };
+
+    // 早期的 JavaScript 开发人员经常使用这种模式创建新对象
+    // 但是现在，对象字面量成为创建这种对象的首选模式
+    var person1 = {
+      name: "Nicholas",
+      age: 29,
+      job: "Software Engineer",
+
+      sayName: function () {
+        alert(this.name);
+      }
+    };
+  </script>
+</body>
+</html>
